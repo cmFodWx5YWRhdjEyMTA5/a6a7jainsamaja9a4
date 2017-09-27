@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "17558779079",
+    "firebase_url": "https://jainsamaj-7793c.firebaseio.com",
+    "project_id": "jainsamaj-7793c",
+    "storage_bucket": "jainsamaj-7793c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17558779079:android:d686526e6db864bd",
+        "android_client_info": {
+          "package_name": "com.js.jainsamaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17558779079-l6cetq4kgl9c1l0rrkkqh3jvn2k3embt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.js.jainsamaj",
+            "certificate_hash": "690ab6814020c65214ccec58d0b662393011da5a"
+          }
+        },
+        {
+          "client_id": "17558779079-gbe74v9ggklh3d6trpo78s625137kgqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.js.jainsamaj",
+            "certificate_hash": "ea5f4dd92dacca5894c3312298ec16a4df837045"
+          }
+        },
+        {
+          "client_id": "17558779079-actstc9559b02p9thcpvk44q146meft4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHpIO3_58oakKBHs4pSvGGENx33yoD1xE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17558779079-actstc9559b02p9thcpvk44q146meft4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,354 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+
+    tools:context="com.js.jainsamaj.fragments.NotificationWallFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--End Text View Info-->
+
+                    <!--Selection Category-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATCategory"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_category" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATName"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_name"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text"
+                                    android:nextFocusForward="@+id/etATAddress" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATAddress"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_address"
+                                    android:imeOptions="actionDone" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATCountry"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_country" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATState"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_state" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATDistrict"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_district" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATCity"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_city" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATArea"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_area" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvATDescription"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_temple_description" />
+
+                            <EditText
+                                android:id="@+id/etATDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@drawable/rect_et_bg"
+                                android:gravity="top"
+                                android:imeOptions="actionDone"
+                                android:lines="3"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvATSelectImage"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/add_temple_select_image" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <HorizontalScrollView
+                                    android:id="@+id/hrScrollView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.8"
+                                    android:fillViewport="true">
+
+                                    <LinearLayout
+                                        android:id="@+id/llTempleImg"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal" />
+                                </HorizontalScrollView>
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/sdAddTempleImage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center"
+                                    fresco:placeholderImage="@drawable/ic_add_image"
+                                    android:tint="@color/nav_tint_color"
+                                    fresco:placeholderImageScaleType="fitXY" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATSelectVideo"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_select_video"
+                                    android:maxLines="1"
+                                    android:inputType="text"
+                                    android:imeOptions="actionNext" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etATMobile"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_select_mobile"
+                                    android:inputType="phone"
+                                    android:imeOptions="actionDone" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+                        <!--Button-->
+                        <LinearLayout
+                            style="@style/JSTextGreyStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnATAdd"
+                                style="@style/JSButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_7sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/add_temple_btn" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--End Selection Category-->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdAddTempleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                fresco:placeholderImage="@color/colorWhite" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

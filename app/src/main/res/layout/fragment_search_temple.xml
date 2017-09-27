@@ -1,0 +1,228 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.js.jainsamaj.fragments.NotificationWallFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--Temple  Category-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTCat"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/search_temple_cat"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="text"
+                                    android:nextFocusForward="@+id/etATAddress" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <!--Or Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/or_txt"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!--Temple Name-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTName"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/search_temple_name"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="text"
+                                    android:nextFocusForward="@+id/etATAddress" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <!--Or Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/or_txt"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTCountry"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_country" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTState"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_state" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTDistrict"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_district" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etSTCity"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/add_temple_city" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <!--Button-->
+                        <LinearLayout
+                            style="@style/JSTextGreyStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnSTSearch"
+                                style="@style/JSButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_7sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/search_temple_btn" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--End Selection Category-->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdSearchTempleBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                fresco:placeholderImage="@color/colorWhite" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

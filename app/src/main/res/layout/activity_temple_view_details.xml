@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/vpTVDImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <com.js.jainsamaj.utils.Indicator.CirclePageIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="@dimen/_8sdp"
+                                android:visibility="gone"
+                                custom:pageColor="@android:color/white"
+                                custom:radius="@dimen/_4sdp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvTVDADetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorTransparent"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="3"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/default_txt"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdTVBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                fresco:placeholderImage="@color/colorWhite" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

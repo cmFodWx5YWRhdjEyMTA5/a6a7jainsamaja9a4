@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llPhoneBookRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@color/colorGreyLight"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="@string/default_txt"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvPBRName"
+            style="@style/JSTextBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:gravity="center|start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/default_txt"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dim_nav_menu_text" />
+
+
+    </LinearLayout>
+    <!--ME Layout-->
+    <LinearLayout
+        android:id="@+id/llPhoneBookMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdPBMPDMeImg"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:placeholderImage="@color/colorGrey"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tvPBMPDMeName"
+            style="@style/JSTextBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center|start"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/phone_book_my_details_me_txt"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dim_nav_menu_text" />
+
+    </LinearLayout>
+    <View
+        android:id="@+id/viewPb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ivPMenuImg"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@color/colorGreyLight" />
+    <!--End Me Layout-->
+</LinearLayout>

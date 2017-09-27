@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--Header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreyLight"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/sdUserProfilebanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_140sdp"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@color/colorGreyOverlay" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/sdUserProfile"
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                fresco:actualImageScaleType="centerCrop"
+                                fresco:placeholderImage="@color/colorGrey"
+                                fresco:roundAsCircle="true" />
+
+                            <TextView
+                                android:id="@+id/tvPBDName"
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="@string/default_txt"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold" />
+
+                            <!--Three Image Here-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/ivPBDSMS"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:src="@drawable/ic_sms"
+                                    android:tint="@color/nav_tint_color" />
+
+                                <ImageView
+                                    android:id="@+id/ivPBDCAll"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:src="@drawable/ic_call"
+                                    android:tint="@color/nav_tint_color" />
+
+                                <ImageView
+                                    android:id="@+id/ivPBDEmail"
+                                    android:layout_width="@dimen/_35sdp"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_margin="@dimen/_2sdp"
+                                    android:src="@drawable/ic_email"
+                                    android:tint="@color/nav_tint_color" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+                <!--Header End-->
+                <!--For Mobile Number-->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:hint="@string/phone_book_details_mobile_number"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <View
+                        style="@style/JSViewHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/llMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <!--Mobile List Empty-->
+                    <LinearLayout
+                        android:id="@+id/llMobileEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/mobile_list_empty" />
+                    </LinearLayout>
+                    <!--End Mobile List -->
+                </LinearLayout>
+                <!--End Mobile Number-->
+                <!--For Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:hint="@string/phone_book_details_email_address"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <View
+                        style="@style/JSViewHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/llEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                    <!--Email List Empty-->
+                    <LinearLayout
+                        android:id="@+id/llEmailEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/email_list_empty" />
+                    </LinearLayout>
+                    <!--End Email  Empty List -->
+                </LinearLayout>
+                <!--End Email-->
+
+                <!--For Address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:hint="@string/phone_book_details_address"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <View
+                        style="@style/JSViewHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/llAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                    <!--Address List Empty-->
+                    <LinearLayout
+                        android:id="@+id/llAddressEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/address_list_empty" />
+                    </LinearLayout>
+                    <!--End Address Empty List -->
+                </LinearLayout>
+                <!--End Address-->
+                <!--For Family Member -->
+                <LinearLayout
+                    android:id="@+id/llFamilyMemberMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:hint="@string/phone_book_details_email_family_txt"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <View
+                        style="@style/JSViewHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_5sdp" />
+
+                    <LinearLayout
+                        android:id="@+id/llFamilyMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                    <!--Family List Empty-->
+                    <LinearLayout
+                        android:id="@+id/llFamilyEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/family_list_empty" />
+                    </LinearLayout>
+                    <!--End Family Empty List -->
+                </LinearLayout>
+                <!--End Family Member-->
+
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdPBDetailsBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        fresco:placeholderImage="@color/colorWhite" />
+</LinearLayout>

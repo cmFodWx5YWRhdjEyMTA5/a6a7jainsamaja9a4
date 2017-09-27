@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar" />
+
+    <ScrollView
+        android:id="@+id/slMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:id="@+id/flMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Header-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/sdMyProfileCover"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@color/colorGreyOverlay" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/sdMyProfile"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginTop="@dimen/_80sdp"
+                            fresco:actualImageScaleType="centerCrop"
+                            fresco:placeholderImage="@color/colorGrey"
+                            fresco:roundAsCircle="true" />
+                    </FrameLayout>
+                </LinearLayout>
+                <!--Header End-->
+                <!--After Header List-->
+                <TextView
+                    android:id="@+id/tvPBMPDName"
+                    style="@style/JSTextBlackStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/default_txt"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <!--For Mobile List-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity=""
+                                android:layout_weight="0.90"
+                                android:gravity="center_horizontal"
+                                android:hint="@string/phone_book_details_mobile_number"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/ivMobileAdd"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.10"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_add"
+                                android:tint="@color/nav_tint_color" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            style="@style/JSViewHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp" />
+
+                        <!--For Mobile Recycler View-->
+                        <LinearLayout
+                            android:id="@+id/llAddMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rvMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <!--For Mobile Recycler View End-->
+
+                        <!--Empty Mobile List-->
+                        <LinearLayout
+                            android:id="@+id/llAddMobileEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/mobile_list_empty" />
+                        </LinearLayout>
+                        <!--Empty Mobile List End-->
+                    </LinearLayout>
+                    <!--For Mobile List End-->
+
+
+                    <!--For Email List-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity=""
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="0.90"
+                                android:gravity="center_horizontal"
+                                android:hint="@string/phone_book_details_email_address"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.10"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_add"
+                                android:tint="@color/colorWhite" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/JSViewHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <!--For Email Recycler View-->
+                        <LinearLayout
+                            android:id="@+id/llAddEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rvEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <!--For Email Recycler View End-->
+
+                        <!--Empty Email List-->
+                        <LinearLayout
+                            android:id="@+id/llAddEmailEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/mobile_list_empty" />
+                        </LinearLayout>
+                        <!--Empty Email List End-->
+                    </LinearLayout>
+                    <!--For Email List End-->
+
+                    <!--For Address List-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity=""
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_weight="0.90"
+                                android:gravity="center_horizontal"
+                                android:hint="@string/phone_book_details_address"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/ivAddressAdd"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.10"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_add"
+                                android:tint="@color/nav_tint_color" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/JSViewHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp" />
+
+                        <!--For Address Recycler View-->
+                        <LinearLayout
+                            android:id="@+id/llAddAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rvAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <!--For Address Recycler View End-->
+
+                        <!--Empty Address List-->
+                        <LinearLayout
+                            android:id="@+id/llAddAddressEmpty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/mobile_list_empty" />
+                        </LinearLayout>
+                        <!--Empty Address List End-->
+                    </LinearLayout>
+                    <!--For Address List End-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <Button
+                            android:id="@+id/btnSave"
+                            style="@style/JSButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/phone_book_my_details_btn_save"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--After Header List End-->
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdMYProfileBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        fresco:placeholderImage="@color/colorWhite" />
+</LinearLayout>

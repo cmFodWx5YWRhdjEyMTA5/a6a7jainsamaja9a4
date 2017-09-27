@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+        <!--card_view:cardCornerRadius="6dp"
+        card_view:cardElevation="5dp"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorTemple" />
+                <!--Start Row upper view-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:background="@drawable/wall_btn_temple_post_border"
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:text="@string/wall_tp_txt"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!--Start Row upper view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvWTPTitle"
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_txt"
+                        android:textSize="@dimen/dim_app_tb_tv"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/JSTextGreyStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:text="@string/wall_tp_cat" />
+
+                    <TextView
+                        android:id="@+id/tvWTPCategory"
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.80"
+                        android:text="@string/default_txt"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--End Row upper view-->
+
+            <!--Start Middle view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdWTPImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        fresco:actualImageScaleType="centerCrop"
+                        fresco:placeholderImage="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvWTPDes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/colorTransparent"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/default_txt"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp" />
+                </FrameLayout>
+            </LinearLayout>
+            <!--End Middle view-->
+            <!--Start Bottom view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/JSTextGreyStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:text="@string/wall_tp_address" />
+
+                    <TextView
+                        android:id="@+id/tvWTPAddress"
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.80"
+                        android:ellipsize="end"
+                        android:text="@string/default_txt"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/JSTextGreyStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:text="@string/wall_tp_contact" />
+
+                    <TextView
+                        android:id="@+id/tvWTPContact"
+                        style="@style/JSTextBlackStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.80"
+                        android:text="@string/default_txt"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--End Bottom view-->
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

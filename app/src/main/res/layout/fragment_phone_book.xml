@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.js.jainsamaj.fragments.NotificationWallFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <EditText
+            android:id="@+id/etPBSearch"
+            style="@style/JSEditTextSearchStyle"
+            android:layout_weight="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--&lt;!&ndash;ME Layout&ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:id="@+id/llPhoneBookMe"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="@dimen/_5sdp">-->
+
+            <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/sdPBMPDMeImg"-->
+            <!--android:layout_width="@dimen/_50sdp"-->
+            <!--android:layout_height="@dimen/_50sdp"-->
+            <!--fresco:actualImageScaleType="centerCrop"-->
+            <!--fresco:placeholderImage="@color/colorDark"-->
+            <!--fresco:roundAsCircle="true" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvPBMPDMeName"-->
+            <!--style="@style/JSTextBlackStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/_10sdp"-->
+            <!--android:text="@string/default_txt"-->
+            <!--android:textSize="@dimen/_15sdp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--</LinearLayout>-->
+            <!--&lt;!&ndash;End Me Layout&ndash;&gt;-->
+            <com.js.jainsamaj.utils.PhoneBook.IndexFastScrollRecyclerView
+                android:id="@+id/rvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvPBEmptyTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/phone_book_empty"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdPBtBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="bottom"
+                fresco:placeholderImage="@color/colorWhite" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+</LinearLayout>

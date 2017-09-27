@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvMPaddress"
+            style="@style/JSTextBlackStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+
+            android:text="@string/phone_book_details_address"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dim_nav_menu_text" />
+
+        <!--Start street-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextInputLayout">
+
+            <EditText
+                android:id="@+id/etMPStreet"
+                style="@style/JSEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_book_my_details_add_street1"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--End Street-->
+
+        <!--Start Country And State-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPCountry"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phone_book_my_details_add_country"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPState"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phone_book_my_details_add_state"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <!--End Country And State-->
+
+        <!--Start District And City-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPDistrict"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phone_book_my_details_add_district"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPCity"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phone_book_my_details_add_city"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <!--End District And City-->
+
+
+        <!--Start Area And Zip-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPArea"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phone_book_my_details_add_area"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                app:hintTextAppearance="@style/TextInputLayout">
+
+                <EditText
+                    android:id="@+id/etMPZip"
+                    style="@style/JSEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_book_my_details_add_zip"
+
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <!--End Area And Zip-->
+        <!--Remove and Map Buttons-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivAddressRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove"
+                android:tint="@color/nav_tint_color"/>
+
+            <ImageView
+                android:id="@+id/ivAddressGlob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_glob"
+                android:tint="@color/nav_tint_color"/>
+
+        </RelativeLayout>
+        <!--Address Type-->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextInputLayout">
+
+            <EditText
+                android:id="@+id/etMPAddressType"
+                style="@style/JSEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_book_my_details_add_Address_type"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:visibility="gone" />
+        </android.support.design.widget.TextInputLayout>
+        <!--End Address Type-->
+    </LinearLayout>
+</LinearLayout>

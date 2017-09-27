@@ -1,0 +1,448 @@
+<resources>
+    <string name="app_name">42 Samaj</string>
+    <string name="platform_type">Android</string>
+    <string name="token_txt">Android Token</string>
+
+    <!--For Google Map-->
+    <string name="google_maps_key">AIzaSyAMZ-T4T3w-1JI4F_SAkgIqUWe59Ht-sFQ</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--*************************************Navigation Bar*************************************-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!--Nav Header-->
+    <string name="nav_header_profile_txt">View Profile</string>
+    <!--Nav Menu-->
+    <!--//change as per client talk Notification Wall to dashboard(31-05-2017)-->
+    <string name="nav_menu_notification_wall">Dashboard</string>
+    <string name="nav_menu_matrimony">Matrimony</string>
+    <string name="nav_menu_profile">Profile</string>
+    <string name="menu_user_profile">User Profile</string>
+    <string name="nav_menu_search">Search</string>
+    <string name="nav_menu_search_List">Matrimony List</string>
+    <string name="nav_menu_temple">Temple</string>
+    <string name="nav_menu_temple_finder">Yatra Planner</string>
+    <string name="nav_menu_add_temple">Add Temple</string>
+    <string name="nav_menu_search_temple">Search Temple</string>
+    <string name="nav_menu_phone_book">Phone Book</string>
+    <string name="nav_menu_tutorials">Tutorials</string>
+    <string name="nav_menu_about_us">About Us</string>
+    <string name="nav_menu_change_passwd">Change Password</string>
+    <string name="nav_menu_logout">Logout</string>
+
+    <!--Default Messages -->
+    <string name="something_wrong_txt" type="id">Something Went Wrong !</string>
+    <string name="txt_no_network">Sorry, your device couldn\'t connect (no Internet connection)!</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_cancel">CANCEL</string>
+    <string name="please_wait_txt">Please Wait..</string>
+    <string name="app_exit_message">Do you want to exit application?</string>
+    <string name="default_txt">--</string>
+    <string name="termsAndConditions_txt">Terms And Conditions</string>
+    <string name="website_txt">WebSite</string>
+
+    <!--Default Dialog Messages-->
+    <string name="error_enter_login_info">Please Fill Login Details!</string>
+    <string name="error_record_not_available">Record Not Found!</string>
+    <string name="error_enter_add_temple_info">Please Fill Temple Details!</string>
+    <string name="error_enter_add_temple_img">Please Add Temple Image!</string>
+    <string name="error_enter_add_temple_icon">Select Temple Icon</string>
+    <string name="error_enter_search_temple_info"> Please Select Category Or Enter The Temple Name Or Select Below Option For Search!</string>
+    <string name="error_enter_add_profile">Please Fill Profile Details!</string>
+    <string name="error_lat_long_not_found">Your Current Location Not Found!</string>
+    <string name="gps_dialog_custom_msg">GPS is disabled in your device. Would you like to enable it.?</string>
+    <string name="error_img_greater_then4">Select Only Four Image!</string>
+
+    <string name="selection_empty">Record Not Found!</string>
+    <string name="list_empty">Record Not Found!</string>
+
+    <string name="mobile_list_empty">Record Not Found!</string>
+    <string name="email_list_empty">Record Not Found!</string>
+    <string name="address_list_empty">Record Not Found!</string>
+    <string name="family_list_empty">Record Not Found!</string>
+
+
+    <string name="otp_error_msg">OTP field can\'t empty!</string>
+    <string name="otp_pass_error">Password filed can\'t empty!</string>
+    <!--Edit text Hint-->
+    <string name="hint_search">Search</string>
+
+
+    <!--**************************************Login Screen***************************************-->
+    <string name="login_txt_email">User Id</string>
+    <string name="login_txt_password">Password</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_txt_tc"><u>Terms and Conditions</u></string>
+
+    <!--*******************************Matrimony Screen(UserRequest ListMain And Search)*****************************-->
+    <string name="profile_txt">Add all information get perfect beterhalf,Your\n match will be shown on wall as notification</string>
+    <string name="profile_country_live_in">Country In</string>
+    <string name="profile_state_live_in">State In</string>
+    <string name="profile_city_live_in">City In</string>
+    <string name="profile_marital_status">Marital Status</string>
+    <string name="profile_education_level">Education Level</string>
+    <string name="profile_education_fields">Education Fields</string>
+    <string name="profile_work_with">Work With</string>
+    <string name="profile_work_as">Work As</string>
+    <string name="profile_income">Income</string>
+    <string name="profile_height">Height</string>
+    <string name="profile_weight">Weight</string>
+    <string name="profile_deit">Deit</string>
+    <string name="profile_user_not_register">You are not register with system.</string>
+
+
+    <string name="profile_body_type">Body Type :</string>
+    <string name="profile_body_1">Slim</string>
+    <string name="profile_body_2">Athletic</string>
+    <string name="profile_body_3">Average</string>
+    <string name="profile_body_4">Heavy</string>
+
+
+    <string name="profile_skin_type">Skin Tone :</string>
+    <string name="profile_skin_1">Very Fair</string>
+    <string name="profile_skin_2">Fair</string>
+    <string name="profile_skin_3">Wheatish</string>
+    <string name="profile_skin_4">Dark</string>
+
+
+    <string name="profile_hobbies">Hobbies</string>
+    <string name="profile_mobile_number">Mobile Number </string>
+    <string name="profile_about_my_self">About My Self :</string>
+
+
+    <string name="profile_disabilites">Disabilities :</string>
+    <string name="profile_disabilites_none_profile">None</string>
+    <string name="profile_disabilites_Profile">Physical Disability</string>
+
+    <string name="profile_disabilites_doesnt_metter"> Doesn\'t Matter </string>
+    <string name="profile_disabilites_doesnt_incude">Don\'t Include Profiles with Disability</string>
+
+    <string name="profile_btn_save">Save</string>
+
+    <string name="profile_marital">Select Marital Status</string>
+    <string name="profile_Height">Select Height</string>
+    <string name="profile_edu_level">Select Education Level</string>
+    <string name="profile_edu_field">Select Education Field</string>
+    <string name="profile_wwith">Select Work With</string>
+    <string name="profile_wAs">Select Work As</string>
+    <string name="profile_a_income">Select Income</string>
+
+    <string name="profile_srch_marital">Search Marital Status</string>
+    <string name="profile_srch_height">Search Height</string>
+    <string name="profile_srch_edu_level">Search Education Level</string>
+    <string name="profile_srch_edu_field">Search Education Field</string>
+    <string name="profile_srch_wrok_with">Search Work with</string>
+    <string name="profile_srch_wrok_as">Search Work As</string>
+    <string name="profile_srch_a_income">Search Income</string>
+
+
+    <!--***********************************Search***********************************-->
+    <string name="profile_search_age">Age :</string>
+    <string name="profile_search_height">Height :</string>
+    <string name="profile_search_from">From</string>
+    <string name="profile_search_to">To</string>
+    <string name="profile_search_marital_status">Marital Status :</string>
+    <string name="profile_search_marital_status_single">Single</string>
+    <string name="profile_search_marital_status_divorced">Divorced</string>
+    <string name="profile_search_marital_status_windowed">Widowed</string>
+
+    <string name="profile_search_profile_create">Profile Created By :</string>
+    <string name="profile_search_profile_create_by1">Mother</string>
+    <string name="profile_search_profile_create_by2">Father</string>
+    <string name="profile_search_profile_create_by3">Bother</string>
+    <string name="profile_search_profile_create_by4">Sister</string>
+
+    <string name="profile_search_location_and_grew_up">Location And Grew Up</string>
+    <string name="profile_search_location_and_grew_up_county">Country Living</string>
+    <string name="profile_search_location_and_grew_up_state">State Living</string>
+    <string name="profile_search_location_and_grew_up_city">City Living</string>
+
+    <string name="profile_search_education_and_professional">Education And Professional Data</string>
+    <string name="profile_search_education_and_professional_level">Education</string>
+    <string name="profile_search_education_and_professional_area">Profession Area</string>
+
+    <string name="profile_search_education_and_professional_work">Work With</string>
+    <string name="profile_search_education_and_professional_work_pc">Private Company</string>
+    <string name="profile_search_education_and_professional_work_g_ps">Government / Public Sector</string>
+    <string name="profile_search_education_and_professional_work_d_cs">Defense / Civil Services</string>
+    <string name="profile_search_education_and_professional_work_b_se">Business / Self Employed</string>
+    <string name="profile_search_education_and_professional_work_not">Not Working</string>
+
+    <string name="profile_search_education_and_professional_work_as">Work As</string>
+    <string name="profile_search_education_and_professional_work_programmer">Software Engineer</string>
+    <string name="profile_search_education_and_professional_work_doctor">Doctor</string>
+
+    <string name="profile_search_education_and_professional_work_income">Annual Income</string>
+    <string name="profile_search_education_and_professional_work_income_1">0Lac - 1Lac</string>
+    <string name="profile_search_education_and_professional_work_income_2">1Lac - 2.5Lacs</string>
+    <string name="profile_search_education_and_professional_work_income_3">2.5Lacs - 5Lacs</string>
+    <string name="profile_search_education_and_professional_work_income_4">5Lacs And Above</string>
+
+
+    <string name="profile_search_life_style">Lifestyle And Appearance</string>
+
+
+    <string name="profile_search_gender">Gender:</string>
+    <string name="profile_search_gender_male">Male</string>
+    <string name="profile_search_gender_female">Female</string>
+
+
+    <string name="profile_search_btn_save">Save</string>
+
+
+    <string name="profile_search_ft_age">Select Age</string>
+
+    <string name="profile_srch_ft_age">Search Age</string>
+
+    <!--Matrimony List and Detail Screen-->
+    <string name="search_matrimony_txt">Matrimony List</string>
+    <string name="search_matrimony_details">Details</string>
+    <string name="search_matrimony_empty">Please set the search criteria on click of Filter button at top to find profile!</string>
+    <string name="search_matrimony_diability_empty">For Further Information Contact Above Mobile Number</string>
+
+
+    <!--*************************************Temple Finder (Add and Search Temple)********************************-->
+    <string name="add_temple_category">Category</string>
+    <string name="add_temple_name">Name</string>
+    <string name="add_temple_address">Address</string>
+    <string name="add_temple_country">Country</string>
+    <string name="add_temple_state">State</string>
+    <string name="add_temple_district">District</string>
+    <string name="add_temple_city">City</string>
+    <string name="add_temple_description">Description :</string>
+    <string name="add_temple_area">Area</string>
+    <string name="add_temple_select_image">Select Image</string>
+    <string name="add_temple_select_video">Select Video</string>
+    <string name="add_temple_select_mobile">Mobile</string>
+
+    <string name="add_temple_btn">Add Temple</string>
+
+    <string name="add_temple_country_error">Please Select Country</string>
+    <string name="add_temple_state_error">Please Select State</string>
+    <string name="add_temple_district_error">Please Select District</string>
+    <string name="add_temple_city_error">Please Select City</string>
+    <string name="add_temple_area_error">Please Select Area</string>
+
+
+    <!--For Camera Dialog-->
+    <string name="add_temple_icon_text">Select Icon</string>
+    <string name="add_profile_image_text">Select Profile Image</string>
+    <string name="add_cover_image_text">Select Cover Image</string>
+    <string name="camera_photo">Camera</string>
+    <string name="gallery_photo">Gallery</string>
+    <string name="cancel_photo">Cancel</string>
+
+
+    <!--Selection Screen Title For Add Temple-->
+    <string name="temple_category">Select Category</string>
+    <string name="temple_county">Select Country</string>
+    <string name="temple_state">Select State</string>
+    <string name="temple_district">Select District</string>
+    <string name="temple_city">Select City</string>
+    <string name="temple_area">Select Area</string>
+
+    <!--Selection Screen Hint For Search EditText-->
+    <string name="temple_category_Search">Search Category </string>
+    <string name="temple_county_Search">Search Country </string>
+    <string name="temple_state_Search">Search State </string>
+    <string name="temple_district_Search">Search District </string>
+    <string name="temple_city_Search">Search City </string>
+    <string name="temple_area_Search">Search Area </string>
+
+    <!--*******************************Search Temple*******************************-->
+    <string name="search_temple_cat">Category</string>
+    <string name="search_temple_name">Enter Temple Name</string>
+    <string name="or_txt">OR</string>
+    <string name="search_temple_btn">Search </string>
+
+    <string name="search_temple_txt">Temples</string>
+    <string name="search_temple_view_details_txt">Information</string>
+    <string name="search_temple_empty">Temple Not Found</string>
+    <string name="temple_search">Enter Temple Name</string>
+
+    <!--**************************************Screen Temple Details***************************************-->
+    <string name="temple_detail_call_btn">Call Now</string>
+    <string name="temple_detail_info_btn">Details</string>
+    <!--**************************************Screen PhoneBook , PhoneBook Details ,PhoneBook My Profile ***************************************-->
+    <string name="phone_book_empty">Record Not Found</string>
+    <string name="phone_book_details_mobile_number">Mobile Number</string>
+    <string name="phone_book_details_title_txt">Details</string>
+    <string name="phone_book_details_mobile_txt">Mobile </string>
+    <string name="phone_book_details_email_address">Email Address</string>
+    <string name="phone_book_details_email_txt">Email</string>
+    <string name="phone_book_details_address">Address</string>
+    <string name="phone_book_details_email_family_txt">Family Member</string>
+    <string name="phone_book_my_details_txt">My Contacts</string>
+
+
+    <string name="phone_book_my_details_add_street">Street</string>
+    <string name="phone_book_my_details_add_street1">Street</string>
+    <string name="phone_book_my_details_add_country">Country</string>
+    <string name="phone_book_my_details_add_state">State</string>
+    <string name="phone_book_my_details_add_district">District</string>
+    <string name="phone_book_my_details_add_city">City</string>
+    <string name="phone_book_my_details_add_area">Area</string>
+    <string name="phone_book_my_details_add_zip">Zip</string>
+    <string name="phone_book_my_details_add_Address_type">Address Type</string>
+
+    <string name="phone_book_my_details_btn_save">Save</string>
+
+    <string name="phone_book_my_details_me_txt">ME</string>
+
+
+    <!--**************************************UserM Profile Screen***************************************-->
+    <string name="user_profile_details_txt">Profile</string>
+
+    <!--Personal Details-->
+    <string name="user_profile_details_personal_txt">Personal Details</string>
+    <string name="user_profile_details_g_father">Grand Father :</string>
+    <string name="user_profile_details_gg_father">Great Grand Father :</string>
+    <string name="user_profile_details_gotra">Gotra :</string>
+    <string name="user_profile_details_disability">Disability :</string>
+    <string name="user_profile_details_n_place">Native Place :</string>
+    <string name="user_profile_details_b_group">Blood Group :</string>
+    <string name="user_profile_details_b_donor">Blood Donor :</string>
+    <string name="user_profile_details_k_suraksha">Kutumb Suraksha :</string>
+    <string name="user_profile_details_mediclaim">MediClaim :</string>
+    <string name="user_profile_details_mobile">Mobile Number :</string>
+    <string name="user_profile_details_gender">Gender :</string>
+    <string name="user_profile_details_dob">Date Of Birth :</string>
+    <string name="user_profile_details_f_h_name">Father/Husband Name:</string>
+
+    <!--Marriage Details-->
+    <string name="user_profile_details_marriage_txt">Marriage Details</string>
+    <string name="user_profile_details_eng_date">Engagement Date :</string>
+    <string name="user_profile_details_engage_with">EngagedWith :</string>
+    <string name="user_profile_details_mrg_status">MaritalStatus :</string>
+    <string name="user_profile_details_mrg_with">Married With :</string>
+    <string name="user_profile_details_anniversary_date">Anniversary Date :</string>
+    <string name="user_profile_details_f_in_law">FatherInLaw :</string>
+    <string name="user_profile_details_cc_in_law">CurrentCityInLaw :</string>
+    <string name="user_profile_details_na_place">NativePlaceInLaw :</string>
+
+    <!--Education Details-->
+    <string name="user_profile_details_eud_details_txt">Education Details</string>
+    <string name="user_profile_details_eud_s_c_name">School/College :</string>
+    <string name="user_profile_details_eud_p_year">Passing Year :</string>
+
+    <!--Address Details-->
+    <string name="user_profile_details_address_txt">Address Details:</string>
+
+    <!--Seminar Details-->
+    <string name="user_profile_details_seminar_details_txt">Seminar Details</string>
+    <string name="user_profile_details_semi_subject">Subject :</string>
+    <string name="user_profile_details_semi_desc">Description :</string>
+    <string name="user_profile_details_semi_ins_name">Institute Name :</string>
+    <string name="user_profile_details_semi_ins_address">Institute Address :</string>
+    <string name="user_profile_details_semi_start_month">Start Month:</string>
+    <string name="user_profile_details_semi_end_month">End Month :</string>
+    <string name="user_profile_details_semi_start_year">Start Year :</string>
+    <string name="user_profile_details_semi_end_year">End Year :</string>
+
+    <!--Training Details-->
+    <string name="user_profile_details_training_details_txt">Training Details</string>
+    <string name="user_profile_details_training_subject">Subject :</string>
+    <string name="user_profile_details_training_desc">Description :</string>
+    <string name="user_profile_details_training_ins_name">Institute Name :</string>
+    <string name="user_profile_details_training_ins_address">Institute Address :</string>
+    <string name="user_profile_details_training_start_month">Start Month:</string>
+    <string name="user_profile_details_training_end_month">End Month :</string>
+    <string name="user_profile_details_training_start_year">Start Year :</string>
+    <string name="user_profile_details_training_end_year">End Year :</string>
+
+    <!--Project Details-->
+    <string name="user_profile_details_project_details_txt">Project Details</string>
+    <string name="user_profile_details_project_occ">Occupation :</string>
+    <string name="user_profile_details_project_name">Name :</string>
+    <string name="user_profile_details_project_des">Descriptions :</string>
+    <string name="user_profile_details_project_month">Month :</string>
+    <string name="user_profile_details_project_year">Year :</string>
+    <string name="user_profile_details_project_url">Url :</string>
+    <string name="user_profile_details_project_member">Team Member :</string>
+
+    <!--Achievement Details-->
+    <string name="user_profile_details_arch_details_txt">Achievement Details</string>
+    <string name="user_profile_details_arch_title">Title :</string>
+    <string name="user_profile_details_arch_dec">Description :</string>
+    <string name="user_profile_details_arch_authority">Authority :</string>
+    <string name="user_profile_details_arch_expired">Expired :</string>
+    <string name="user_profile_details_arch_cer_month">Certification Month :</string>
+    <string name="user_profile_details_arch_cer_year">Certification Year :</string>
+    <string name="user_profile_details_arch_expi_month">Expiration Month :</string>
+    <string name="user_profile_details_arch_expi_year">Expiration Year :</string>
+
+    <!--**************************************Notification wall Screen***************************************-->
+
+    <!--Candidate Row-->
+    <string name="wall_cp_txt">Matrimonial</string>
+    <string name="wall_cp_live">Live In :</string>
+    <string name="wall_cp_edu">Education :</string>
+    <string name="wall_cp_work_with">Work With :</string>
+    <string name="wall_cp_height">Height :</string>
+    <string name="wall_cp_weight">Weight :</string>
+
+    <!--Job posting Row-->
+    <string name="wall_jp_txt">Job Post</string>
+    <string name="wall_jp_role">Job Role :</string>
+    <string name="wall_jp_edu">Education :</string>
+    <string name="wall_jp_package">Package:</string>
+    <string name="wall_jp_exp">Experience :</string>
+    <string name="wall_jp_job_location">Location :</string>
+    <string name="wall_jp_job_contact">Contact:</string>
+
+    <!--Product Row-->
+    <string name="wall_pp_txt">Product</string>
+    <string name="wall_pp_category">Category:</string>
+    <string name="wall_pp_service">Service:</string>
+    <string name="wall_pp_contact">Contact :</string>
+
+    <!--Event Row-->
+    <string name="wall_ep_txt">Event</string>
+    <string name="wall_ep_location">Location :</string>
+    <string name="wall_ep_s_date">Start Date :</string>
+    <string name="wall_ep_e_date">End Date :</string>
+
+    <!--Temple Row-->
+    <string name="wall_tp_txt">Temple</string>
+    <string name="wall_tp_cat">Category :</string>
+    <string name="wall_tp_address">Address :</string>
+    <string name="wall_tp_contact">Contact :</string>
+
+    <!--Advertisement Row-->
+    <string name="wall_ap_txt">Advertisement</string>
+    <string name="wall_ap_address">Address:</string>
+    <string name="wall_ap_s_date">Contact :</string>
+    <string name="wall_ap_e_date">Email :</string>
+
+
+    <string name="tv_wall_empty">Record Not Found</string>
+    <string name="tv_view_profile">View Profile</string>
+
+
+    <!--Custom Dialog For Forgot Dialog-->
+    <string name="forgot_dialog_txt">Forgot Password</string>
+    <string name="et_forgot_dialog_hint">Enter Register Email</string>
+    <string name="btn_forgot_ok">Ok</string>
+    <string name="btn_forgot_cancel">Cancel</string>
+    <string name="forgot_dialog_custom_msg">Enter Email Id</string>
+
+    <!--Change Password-->
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm Password</string>
+    <string name="error_new_password">New Password &amp; Confirm Password doesn\'t match</string>
+    <string name="error_old_password">Please enter old password</string>
+    <string name="error_enter_new_password">Please enter New Password</string>
+
+    <!--Otp Screen-->
+    <string name="otp_title_txt">OTP</string>
+    <string name="otp_hint">Enter Your OTP</string>
+    <string name="otp_ed_new_hint">New Password</string>
+    <string name="otp_ed_confirm_hint">Confirm Password</string>
+    <string name="otp_btn_resend">Resend</string>
+    <string name="otp_btn_submit">Submit</string>
+
+
+</resources>

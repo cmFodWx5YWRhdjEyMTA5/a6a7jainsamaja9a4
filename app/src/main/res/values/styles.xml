@@ -1,0 +1,163 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <!--Change OverFlow Icon color-->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/nav_tint_color</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Splash Screen -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash_layer</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--Dialog Animation-->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- Progress Dialog-->
+    <style name="ProgressDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <!--Button Style-->
+    <style name="JSButtonStyle">
+        <item name="android:textColor">@color/btnTextColor</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/btn_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rect_btn_bg</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+    </style>
+
+    <!--Edit Text Text Input Layout-->
+    <style name="TextInputLayout" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+        <item name="android:textColor">@color/etTextHintColor</item>
+    </style>
+
+    <!--EditText Editable-->
+    <style name="JSEditTextStyle">
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+        <item name="android:textColor">@color/etTextColor</item>
+        <item name="android:textColorHint">@color/etTextHintColor</item>
+    </style>
+
+    <!--EditText clickable With drawable-->
+    <style name="JSEditTextClickableStyle">
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+        <item name="android:textColor">@color/etTextColor</item>
+        <item name="android:textColorHint">@color/etTextHintColor</item>
+        <item name="android:focusable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:drawableRight">@drawable/ic_right_arrow</item>
+        <item name="android:backgroundTintMode" tools:targetApi="lollipop">@color/colorAccent</item>
+    </style>
+
+    <!--EditText clickable Without drawable-->
+    <style name="JSEditTextClickableWithOutDrawableStyle">
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+        <item name="android:textColor">@color/etTextColor</item>
+        <item name="android:textColorHint">@color/etTextHintColor</item>
+        <item name="android:focusable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:backgroundTintMode" tools:targetApi="lollipop">@color/colorAccent</item>
+    </style>
+    <!--<EditText
+        android:id="@+id/etPBSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_weight="1"
+        android:background="@drawable/rect_et_bg_with_border"
+        android:drawableLeft="@drawable/ic_search"
+        android:hint="@string/phone_book_search"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_110sdp"
+        android:paddingRight="@dimen/_110sdp"
+        android:textSize="@dimen/_12sdp" />-->
+    <!--TextView Black-->
+    <style name="JSEditTextSearchStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:drawableLeft">@drawable/ic_search</item>
+        <item name="android:drawableTint" tools:targetApi="m">@color/colorGrey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:hint">@string/hint_search</item>
+        <item name="android:background">@drawable/rounded_serach_et_bg_with_border</item>
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+
+    </style>
+
+    <style name="JSTextBlackStyle">
+        <item name="android:textColor">@color/tvTextBlackColor</item>
+        <item name="android:textColorHint">@color/tvTextBlackColor</item>
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+    </style>
+
+    <style name="JSTextGreyStyle">
+        <item name="android:textColor">@color/tvTextGreyColor</item>
+        <item name="android:textColorHint">@color/tvTextGreyColor</item>
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+    </style>
+
+    <style name="JSTextDarkStyle">
+        <item name="android:textColor">@color/nav_tint_color</item>
+        <item name="android:textColorHint">@color/nav_tint_color</item>
+        <item name="android:textSize">@dimen/dim_app_tb_et</item>
+    </style>
+
+    <!--View Vertical-->
+    <style name="JSViewVertical">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/viewBgColor</item>
+    </style>
+
+    <!--View Horizontal-->
+    <style name="JSViewHorizontal">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:background">@color/viewBgColor</item>
+    </style>
+
+    <!--Custom Dialog-->
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+
+</resources>

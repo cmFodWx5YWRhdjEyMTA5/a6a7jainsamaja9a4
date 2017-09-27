@@ -1,0 +1,604 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.js.jainsamaj.fragments.NotificationWallFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--Text View Info-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPNote"
+                            style="@style/JSTextBlackStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:hint="@string/profile_txt" />
+                    </LinearLayout>
+                    <!--End Text View Info-->
+
+                    <!--Selection Category-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPCountryIn"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_country_live_in" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPStateIn"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_state_live_in" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPCityIn"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_city_live_in" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPMStatus"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_marital_status" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPELevel"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_education_level" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPEFields"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_education_fields" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPWWith"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_work_with" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPWAs"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_work_as" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPIncome"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_income" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPHeight"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_height" />
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPWeight"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_weight" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPDeit"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_deit"
+                                    android:visibility="gone" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <!--Body Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPBodyType"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_body_type" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbPBodyType1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:checked="true"
+                                        android:text="@string/profile_body_1"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbPBodyType2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_body_2"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbPBodyType3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_body_3"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbPBodyType4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_body_4"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+                        </LinearLayout>
+                        <!--End Body Type-->
+
+
+                        <!--Skin Type-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPSkinTone"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_skin_type" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbPSkinTone1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:checked="true"
+                                        android:text="@string/profile_skin_1"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbPSkinTone2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_skin_2"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/rbPSkinTone3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_skin_3"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbPSkinTone4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.50"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_skin_4"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+                        </LinearLayout>
+                        <!--End Skin Type-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPHobbies"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_hobbies" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPMobile"
+                                    style="@style/JSEditTextStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_mobile_number"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:nextFocusForward="@+id/etPAboutSelf" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPAboutSelf"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_about_my_self" />
+
+                            <EditText
+                                android:id="@+id/etPAboutSelf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rect_et_bg"
+                                android:gravity="top"
+                                android:imeOptions="actionDone"
+                                android:lines="3"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <!--Disability Type-->
+                        <LinearLayout
+                            android:visibility="visible"
+                            style="@style/JSTextGreyStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPDisability"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_disabilites" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="@dimen/_5sdp">
+
+                                    <RadioButton
+                                        android:id="@+id/rbPDisability1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.30"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:checked="true"
+                                        android:text="@string/profile_disabilites_none_profile"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <RadioButton
+                                        android:id="@+id/rbPDisability2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.70"
+                                        android:buttonTint="@color/colorBlack"
+                                        android:text="@string/profile_disabilites_Profile"
+                                        android:textColor="@color/tvTextGreyColor"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <!--End Disability Type-->
+                        <!--Button-->
+                        <Button
+                            android:id="@+id/btnPSave"
+                            style="@style/JSButtonStyle"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/profile_btn_save" />
+                    </LinearLayout>
+                    <!--End Selection Category-->
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdProfileBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                fresco:placeholderImage="@color/colorWhite" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,684 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--Text View Info-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPNote"
+                            style="@style/JSTextBlackStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:hint="@string/profile_txt" />
+                    </LinearLayout>
+                    <!--End Text View Info-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+                        <!--For Age-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPage"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_search_age" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    app:hintTextAppearance="@style/TextInputLayout">
+
+                                    <EditText
+                                        android:id="@+id/etPSAgeFrom"
+                                        style="@style/JSEditTextClickableWithOutDrawableStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:cursorVisible="false"
+                                        android:fadeScrollbars="false"
+                                        android:gravity="center"
+                                        android:hint="@string/profile_search_from"
+                                        android:textAlignment="center" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.1"
+                                    android:background="@drawable/ic_line" />
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    app:hintTextAppearance="@style/TextInputLayout">
+
+                                    <EditText
+                                        android:id="@+id/etPSAgeTo"
+                                        style="@style/JSEditTextClickableWithOutDrawableStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:cursorVisible="false"
+                                        android:fadeScrollbars="false"
+                                        android:gravity="center"
+                                        android:hint="@string/profile_search_to"
+                                        android:textAlignment="center" />
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--End Age-->
+                        <!--For HeightRequest-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPheight"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_search_height" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    app:hintTextAppearance="@style/TextInputLayout">
+
+                                    <EditText
+                                        android:id="@+id/etPSHeightFrom"
+                                        style="@style/JSEditTextClickableWithOutDrawableStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:cursorVisible="false"
+                                        android:fadeScrollbars="false"
+                                        android:gravity="center"
+                                        android:hint="@string/profile_search_from"
+                                        android:textAlignment="center" />
+                                </android.support.design.widget.TextInputLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.1"
+                                    android:background="@drawable/ic_line" />
+
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.4"
+                                    app:hintTextAppearance="@style/TextInputLayout">
+
+                                    <EditText
+                                        android:id="@+id/etPSHeightTo"
+                                        style="@style/JSEditTextClickableWithOutDrawableStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:cursorVisible="false"
+                                        android:fadeScrollbars="false"
+                                        android:gravity="center"
+                                        android:hint="@string/profile_search_to"
+                                        android:textAlignment="center" />
+                                </android.support.design.widget.TextInputLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--End HeightRequest-->
+
+                        <!--For Marital-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSMStatus"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_marital_status" />
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+                        <!--End Marital Status-->
+                        <!--Created By -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvPCreated"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_search_profile_create" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTCBy1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_search_profile_create_by1" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTCBy2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_search_profile_create_by2" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTCBy3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_search_profile_create_by3" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTCBy4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_search_profile_create_by4" />
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+                        </LinearLayout>
+                        <!--End Created By-->
+
+                        <!--For Location And Grew-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPLocation"
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:hint="@string/profile_search_location_and_grew_up"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSCountry"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_location_and_grew_up_county" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSState"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_location_and_grew_up_state" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSCity"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_location_and_grew_up_city" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <!--End Location And Grew-->
+
+                        <!--For Education And Grew-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPEducation"
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:hint="@string/profile_search_education_and_professional"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSPLevel"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_education_and_professional_level" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSPArea"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_education_and_professional_area" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSPWork"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_education_and_professional_work" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSWorkAs"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_education_and_professional_work_as" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@style/TextInputLayout">
+
+                                <EditText
+                                    android:id="@+id/etPSPAnnual"
+                                    style="@style/JSEditTextClickableStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/profile_search_education_and_professional_work_income" />
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+                        <!--End Location And Grew-->
+
+
+                        <!--For LifeStyle-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPlife"
+                                style="@style/JSTextBlackStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:hint="@string/profile_search_life_style"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <!--Body Type-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPBodyType"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_body_type" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPBType1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_body_1" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPBType2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_body_2" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPBType3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_body_3" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPBType4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_body_4" />
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+                        </LinearLayout>
+                        <!--End Body Type-->
+
+
+                        <!--Skin Type-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPSkinTone"
+                                style="@style/JSTextGreyStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_skin_type" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTone1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_skin_1" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTone2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_skin_2" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTone3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_skin_3" />
+
+                                <CheckBox
+                                    android:id="@+id/cbPSTone4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_skin_4" />
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+                        </LinearLayout>
+                        <!--End Skin Type-->
+
+                        <!--Disability Type-->
+                        <LinearLayout
+                            style="@style/JSTextGreyStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvPDisability"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/profile_disabilites" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_15sdp"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbDisability1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_disabilites_doesnt_metter" />
+
+                                <CheckBox
+                                    android:id="@+id/cbDisability2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:text="@string/profile_disabilites_doesnt_incude" />
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/JSViewVertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_3sdp" />
+
+                            <Button
+                                android:id="@+id/btnPSSave"
+                                style="@style/JSButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="@dimen/_7sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/profile_search_btn_save" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdsProfileSearchBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                fresco:placeholderImage="@color/colorWhite"
+                />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
